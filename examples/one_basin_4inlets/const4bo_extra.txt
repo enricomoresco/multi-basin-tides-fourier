@@ -1,0 +1,27 @@
+# Topology and additional parameters for multi_basin_fourier.py
+# Read together with const4bo.txt. Not used from const4bo.txt: U10..U40, h20,
+# nt, n, ac, deltat (periodic solution, no time stepping).
+
+[basin:bay]
+surface = S
+type = lumped
+# propagating only (PLACEHOLDER values, replace with the real geometry):
+# L_bay = 50000
+# d_bay = 2
+# x_obs = 0, 25000, 50000
+Q_river = 0
+
+[channels]
+names = Norris, Bear, CoralBanksN, CoralBanksS
+c1 = sea -> bay
+c2 = sea -> bay
+c3 = sea -> bay
+c4 = sea -> bay
+m_loss = 0
+
+[forcing]
+phase_deg = 90
+
+[numerics]
+K = 30
+M = 2048

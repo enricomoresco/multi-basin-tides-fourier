@@ -1,0 +1,67 @@
+[numerical_variables]
+
+#ACCURACY OF THE MTR, IF HIGHER REQUIRES TO INCREASE nt
+ac = 1e-3
+
+#number of t points per free oscillation
+nt = 500
+
+#max nuber of tidal oscillations
+n = 8
+
+[physical_variables]
+
+#L,D,B inlet dimensions [m]
+
+#1 Norris
+#2 Bears
+#3 Northern eq. Coral Banks
+#4 Southern Coral Banks
+
+L1 = 500
+L2 = 1000
+L3 = 2000
+L4 = 1500
+
+
+# 9 13 9 15
+D1 = 4
+D2 = 5
+D3 = 4
+D4 = 5
+
+#150 200 350 100
+
+B1 = 300
+B2 = 600
+B3 = 500
+B4 = 300
+
+deltat = 10
+#S bay surface [m2]
+
+S = 702000000
+
+
+#initial conditions:
+
+#Ui0: initial velocity of the i-th channel
+U10 = 0
+U20 = 0
+U30 = 0
+U40 = 0
+
+#h20: initial ssh in the bay
+h20 = 0
+
+#a0,w, tide amplitude [m] and frequency [s-1]
+
+a0 = 0.365
+nu = 0.000141
+
+#gravity acceleration [m/s^2]
+g = 9.81
+#viscosity coefficent
+kse = 35
+
+

@@ -1,0 +1,86 @@
+#CONDIZIONi INIZIALI
+
+[physical_variables]
+#L,D,B inlet dimensions [m]
+
+#1 Norris Cut
+#2 Bears Cut
+#3 Northern Coral Banks eq. channel
+#4 Souther Coral Banks channel
+#5 Governors Cut
+#6 Haulover inlet
+#7 Dodge channel
+
+L1 = 1200
+L2 = 1000
+L3 = 2000
+L4 = 1500
+L5 = 2000
+L6 = 400
+L7 = 1200
+
+D1 = 9
+D2 = 5
+D3 = 4
+D4 = 5
+D5 = 9
+D6 = 5
+D7 = 5
+
+B1 = 200
+B2 = 600
+B3 = 500
+B4 = 300
+B5 = 200
+B6 = 100
+B7 = 200
+
+
+
+deltat = 10
+
+#S bay surface [m2]
+
+S   = 650000000
+Sin = 50000000
+#initial conditions 0.7  0.75 0.5 0.7
+
+U10 = 0
+U20 = 0
+U30 = 0
+U40 = 0
+U50 = 0
+U60 = 0
+U70 = 0
+
+h20 = 0
+hin0 = 0
+
+#a0,w, tide amplitude [m] and frequency [s-1]
+
+a0 = 0.365
+nu = 0.000141
+
+#gravity acceleration [m/s^2]
+g = 9.81
+#viscosity coefficent for each channel
+
+kse1 = 70
+kse2 = 35
+kse3 = 35
+kse4 = 35
+kse5 = 70
+kse6 = 70
+kse7 = 70
+
+[numerical_variables]
+#number of t points per oscillazione libera
+acn = 1e-3
+#number of t points per oscillazione libera
+acs = 1e-3
+
+#number of t points per oscillazione libera
+nt = 500
+#pare la soluzione converga intorno a 10000
+#numero di oscillazioni mareai
+n = 8

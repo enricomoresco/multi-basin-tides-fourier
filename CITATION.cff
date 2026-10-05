@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "multi-basin-tides-fourier: a harmonic-balance model of tides in networks of semi-enclosed basins"
+authors:
+  - family-names: Moresco
+    given-names: Enrico
+    affiliation: "University of Genoa"
+version: 1.0.0
+date-released: 2026-10-05
+license: MIT
+repository-code: "https://github.com/enricomoresco/multi-basin-tides-fourier"
+keywords:
+  - tides
+  - semi-enclosed basins
+  - coastal lagoons
+  - harmonic balance
+  - reduced-complexity model
+references:
+  - type: article
+    authors:
+      - family-names: Moresco
+        given-names: Enrico
+      - family-names: De Leo
+        given-names: Francesco
+      - family-names: Talke
+        given-names: Stefan A.
+      - family-names: Tambroni
+        given-names: Nicoletta
+    title: "Historical changes in tides and storm-surge propagation in Biscayne Bay: A reduced-complexity modeling study"
+    journal: "Estuarine, Coastal and Shelf Science"
+    volume: 341
+    start: 110116
+    year: 2026
+    doi: "10.1016/j.ecss.2026.110116"

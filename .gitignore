@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*_fourier.png
+*_fourier_timeseries.csv
+*_fourier_harmonics.npz
+.DS_Store

@@ -1,0 +1,57 @@
+# Topology and additional parameters for multi_basin_fourier.py
+# Read together with const2ba.txt. Not used from const2ba.txt: U10..U70, h20, hin0,
+# nt, n, acn, acs, deltat (periodic solution, no time stepping).
+
+# ---------------------------------------------------------------- basins
+# surface = a key of the const file (S, Sin, ...) or a number [m2]
+# type = lumped (as tides2ba) | propagating (intra-bay propagation)
+
+[basin:south]
+surface = S
+type = lumped
+# propagating only (PLACEHOLDER values, replace with the real geometry):
+# L_bay = 40000            # length along the propagation axis [m]
+# d_bay = 2                # mean depth [m]
+# kse_bay = 35
+# x_river = 40000          # where Q_river enters (default: L_bay)
+Q_river = 0
+# x_obs = 0, 20000, 40000  # stations along the bay [m]
+
+[basin:north]
+surface = Sin
+type = lumped
+# L_bay = 15000
+# d_bay = 2
+Q_river = 0
+
+# ---------------------------------------------------------------- channels
+# cJ = <from> -> <to>, one line per channel J of the const file (L J, D J, B J, kse J).
+# An end is 'sea', another [sea:<name>], or a basin name, optionally with the
+# position of the opening along a propagating basin: south@12000 (default @0).
+# Positive velocity flows from <from> to <to>.
+
+[channels]
+names = Norris, Bear, CoralBanksN, CoralBanksS, Governors, Haulover, Dodge
+c1 = sea -> south
+c2 = sea -> south
+c3 = sea -> south
+c4 = sea -> south
+c5 = sea -> north
+c6 = sea -> north
+c7 = north -> south
+m_loss = 0
+
+# ---------------------------------------------------------------- forcing
+[forcing]
+# amplitude and omega from a0 and nu of the const file;
+# phase_deg = 90 reproduces a0*sin(nu t) as in the tides programs
+phase_deg = 90
+
+# optional additional open boundaries, e.g.:
+# [sea:florida_bay]
+# amplitude = 0.10
+# phase_deg = 150
+
+[numerics]
+K = 30
+M = 2048

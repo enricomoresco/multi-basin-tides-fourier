@@ -1,0 +1,39 @@
+# DEMO ONLY - the bay lengths, depths and opening positions below are ILLUSTRATIVE,
+# not the real geometry. They show how propagating basins are set up.
+# Same channels and surfaces as examples/two_basins_7channels (const2ba.txt).
+
+[basin:south]
+surface = S
+type = propagating
+L_bay = 40000              # length along the propagation axis [m]
+d_bay = 2                  # mean depth [m]
+# kse_bay = 35             # bay Strickler (default: kse of the const file)
+# minor_factor = 1.5       # bay friction on mean flow and overtides / dominant harmonic
+# r_bay = 7e-4             # fix the linearised bay friction [1/s] instead of iterating
+Q_river = 0
+x_obs = 0, 20000, 40000    # stations along the bay [m]
+
+[basin:north]
+surface = Sin
+type = propagating
+L_bay = 15000
+d_bay = 2
+Q_river = 0
+
+[channels]
+names = Norris, Bear, CoralBanksN, CoralBanksS, Governors, Haulover, Dodge
+c1 = sea -> south@2000
+c2 = sea -> south@6000
+c3 = sea -> south@25000
+c4 = sea -> south@35000
+c5 = sea -> north@10000
+c6 = sea -> north@2000
+c7 = north@15000 -> south@0
+m_loss = 0
+
+[forcing]
+phase_deg = 90
+
+[numerics]
+K = 30
+M = 2048
